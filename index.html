@@ -1,0 +1,51 @@
+<head>
+  <title>94% Game</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="node_modules/chart.js/Chart.min.js"></script>
+  <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+
+</head>
+
+<body ng-app="myapp">
+<div ng-controller="DemoCtrl">
+  <hr>
+  {{}}
+  <h1>You have {{level.lives}} attempts remaining</h1>
+  <hr>
+  <h1>{{word}}</h1>
+    <form ng-submit='addWord(word)'>
+      <input ng-model="word" type="text">
+      <!--<button type="submit">Search</button>-->
+    </form>
+    <ul ng-repeat="guess in guessed">
+    <div class="panel panel-success">
+      <p>{{guess.name}}</p>
+      <div class="progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+         ng-style="{width:guess.percentage * 5}">
+          {{guess.percentage}}&#37;
+        </div>
+      </div>
+    </div>
+
+    </ul>
+
+  <hr>
+  <h3>Debug information below:</h3>
+  <pre>Level: {{level | json }}</pre>
+  <pre>Guessed: {{guessed | json }}</pre>
+
+</div>
+
+
+
+<script src="bower_components/angular/angular.js"></script>
+
+<script type='text/javascript' src='app.js'></script>
+<script type='text/javascript' src='game.js'></script>
+<script type='text/javascript' src='test.js'></script>
+
+</body>

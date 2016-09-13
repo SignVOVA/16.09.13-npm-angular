@@ -1,0 +1,15 @@
+{
+  "name": "game94",
+  "authors": [
+    "Volodymyr Maksymchuk <vovamaksymchuk@gmail.com>"
+  ],
+  "description": "The game about 94 percentage",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "angular": "1.5.8",
+    "bootstrap": "^3.3.7"
+  }
+}
